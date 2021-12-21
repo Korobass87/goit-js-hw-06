@@ -3,7 +3,7 @@ const textForControl = document.querySelector("#text")
 textForControl.style.fontSize = `${fontSizeControl.value}px`
 
 console.log(fontSizeControl.textContent)
-fontSizeControl.addEventListener("change", (event) => {
+fontSizeControl.addEventListener("input", (event) => {
     textForControl.style.fontSize = `${event.currentTarget.value}px`
     console.log(event.currentTarget.value)
 })
