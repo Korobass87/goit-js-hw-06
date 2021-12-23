@@ -9,15 +9,23 @@ const ingredients = [
 const ingredientsList = document.querySelector("#ingredients")
 let cost = []
 
-ingredients.forEach(ingredient => {
+// ingredients.forEach(ingredient => {
   
+//   const item = document.createElement("li")
+//   item.textContent = `${ingredient}`
+//   item.classList.add('item')
+  
+  
+//   cost.push(item)
+  
+// })
+
+ingredients.map(ingredient => {
   const item = document.createElement("li")
   item.textContent = `${ingredient}`
   item.classList.add('item')
-  
-  
+
   cost.push(item)
-  
 })
 
 ingredientsList.append(...cost)

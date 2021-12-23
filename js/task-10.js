@@ -9,11 +9,11 @@ const destroyButton = document.querySelector("[data-destroy]")
 
 createButton.addEventListener('click', createBoxes)
 destroyButton.addEventListener('click', deleteBoxes)
-
+let x = 20
 function createBoxes() {
     const divColection = []
     let amount = inputNumber.value
-    let x = 20
+    
     for (let i = 0; i < amount; i += 1) {
       
       x += 10
@@ -24,11 +24,12 @@ function createBoxes() {
       divColection.push(item)
     
     }
-  boxes.innerHTML = ""
+  
   boxes.append(...divColection)
   
 }
 
 function deleteBoxes() {
   boxes.innerHTML = ""
+  x = 20
 }
