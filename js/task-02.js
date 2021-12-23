@@ -7,25 +7,16 @@ const ingredients = [
   'Condiments',
 ];
 const ingredientsList = document.querySelector("#ingredients")
-let cost = []
 
+// let cost=[]
 // ingredients.forEach(ingredient => {
-  
 //   const item = document.createElement("li")
 //   item.textContent = `${ingredient}`
 //   item.classList.add('item')
-  
-  
 //   cost.push(item)
-  
 // })
 
-ingredients.map(ingredient => {
-  const item = document.createElement("li")
-  item.textContent = `${ingredient}`
-  item.classList.add('item')
+const listElem = ingredients.map(ingredient => `<li class = item >${ingredient}</li>`
+).join("")
 
-  cost.push(item)
-})
-
-ingredientsList.append(...cost)
+ingredientsList.insertAdjacentHTML("afterbegin", listElem)
